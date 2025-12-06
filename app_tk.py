@@ -183,7 +183,7 @@ st.markdown(CSS, unsafe_allow_html=True)
 # ============================ NAVBAR ============================
 st.markdown("""
 <div class="navbar">
-  <div class="nav-left">Muneeb Khan</div>
+  <div class="nav-left">Tamer Khrawesh</div>
   <div class="nav-links">
     <div class="nav-link"><a href="#home">Home</a></div>
     <div class="nav-link"><a href="#experience">Experience</a></div>
@@ -198,14 +198,14 @@ st.markdown("""
 # ============================ DATA ============================
 DATA = {
   "contact": {
-    "name": "Muneeb Khan",
+    "name": "Tamer Khrawesh",
     "citizenship": "US Citizen",
-    "email": "khan.529@buckeyemail.osu.edu",
-    "phone": "614-812-7692",
-    "linkedin": "https://www.linkedin.com/in/muneeb-khan-3090a6290/",
+    "email": "khrawesh.3@buckeyemail.osu.edu",
+    "phone": "419-277-7073",
+    "linkedin": "https://www.linkedin.com/in/tamer-khrawesh/",
     "github": "https://github.com/khraweshtk",
     "city": "Columbus, Ohio",
-    "headshot": "headshot_mk.jpg"
+    "headshot": "headshot_tk.jpg"
   },
   "hero": {
     "headline": "B.S. in Computer Science & Engineering",
@@ -272,7 +272,7 @@ DATA = {
   "projects": [
     {
       "name": "Edge AI Surveillance Camera",
-      "period": "Aug 2024 – Sep 2024",
+      # "period": "Aug 2024 – Sep 2024",
       "points": [
         "Engineered a high-performance AI security system, leveraging a custom Raspberry Pi 5 with a Google Coral TPU for machine learning enhancement.",
         "Frigate (NVR) for real-time, accurate object & motion detection, enabling prompt security alerts.",
@@ -282,7 +282,7 @@ DATA = {
     },
     {
       "name": "Homelab",
-      "period": "Oct 2024 – Nov 2024",
+      # "period": "Oct 2024 – Nov 2024",
       "points": [
         "Set up cloud (Proxmox + Kubernetes) and manage everything as code with Terraform & Ansible; recreate the whole setup with one command.",
         "Wrote Python/Go tools to deploy apps, back up data, and check health; hooked them to GitHub Actions so changes auto-deploy after tests.",
@@ -292,7 +292,7 @@ DATA = {
     },
     {
       "name": "AI-Powered Predictive Maintenance",
-      "period": "Nov 2024 – Dec 2024",
+      # "period": "Nov 2024 – Dec 2024",
       "points": [
         "Python + Scikit-learn/TensorFlow on vehicle sensor data (95% accuracy).",
         "Anomaly detection for engine/brake/tire health; analytics via Plotly Dash."
@@ -319,7 +319,7 @@ DATA = {
   ],
   "skills": {
     "Programming": ["Java", "Python", "HTML/CSS", "JavaScript", "Node.js", "React.js", "MATLAB", "C++", "R"],
-    "Tools": ["IntelliJ", "PyCharm", "Eclipse", "SolidWorks", "Webstorm", "MS Office"],
+    "Tools": ["Microsoft Office", "Adobe Softwares", "VS Code", "MATLAB", "SolidWorks", "Altium", "Wireshark"],
     "Non-Technical": ["Solution Oriented", "Skilled Collaborator", "Time Efficient", "Communication", "Critical Thinking"]
   }
 }
@@ -334,7 +334,7 @@ def find_headshot(preferred: str) -> Optional[str]:
     p,
     p.with_suffix(".JPG"), p.with_suffix(".JPEG"), p.with_suffix(".png"), p.with_suffix(".PNG"),
     Path("headshot.jpg"), Path("headshot.JPG"), Path("headshot.jpeg"), Path("headshot.PNG"),
-    Path("headshot_mk.jpg"), Path("headshot_mk.JPG"), Path("headshot_mk.jpeg"),
+    Path("headshot_tk.jpg"), Path("headshot_tk.JPG"), Path("headshot_tk.jpeg"),
   ]
   candidates += list(Path(".").glob("headshot*.*"))
   for c in candidates:
@@ -379,7 +379,7 @@ img_b64 = img_to_base64(img_src) if img_src else None
 avatar_html = (
     f"<img src='data:image/jpeg;base64,{img_b64}' class='avatar'/>"
     if img_b64
-    else "<div class='avatar-fallback'>MK</div>"
+    else "<div class='avatar-fallback'>TK</div>"
 )
 
 
